@@ -26,7 +26,7 @@ Cette application de gestion de tâches permet de créer, lire, mettre à jour e
 
 2. Accédez au répertoire du projet :
     ```bash
-    cd REPOSITORY
+    cd gestion_de_taches
     ```
 
 3. Installez les dépendances :

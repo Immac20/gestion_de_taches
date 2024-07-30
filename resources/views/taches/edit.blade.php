@@ -11,9 +11,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="categories.html">Catégories</a></li>
-                <li><a href="nouvelle-tache.html">Nouvelle Tâche</a></li>
+                <li><a href="{{ route('welcome') }}">Accueil</a></li>
+                <li><a href="{{ route('categories.index') }}">Catégories</a></li>
+                <li><a href="{{ route('taches.create') }}">Nouvelle Tâche</a></li>
             </ul>
         </nav>
     </header>

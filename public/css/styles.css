@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1000px; /* Assure une largeur minimale pour le tableau */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.status-En-attente {
+    background-color: #f39c12;
+    color: #fff;
+}
+.status-En-cours {
+    background-color: #3498db;
+    color: #fff;
+}
+.status-Terminé {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.btn-edit {
+    background-color: #2980b9;
+}
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-new {
+    background-color: #27ae60;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Ajoutez ces styles à la fin de votre fichier CSS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #3498db;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+td[data-label="Actions"] {
+    white-space: nowrap;
+}
+
+.form-categorie {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-submit,
+.btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+.btn-cancel {
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .form-categorie {
+        padding: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.form-group input[readonly] {
+    background-color: #f4f4f4;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Ajustement du style du bouton de mise à jour */
+.btn-submit {
+    background-color: #3498db;
+}
+
+/* Styles pour les messages de succès */
+.alert-success {
+    background-color: #d4edda; /* Couleur de fond */
+    color: #155724; /* Couleur du texte */
+    border: 1px solid #c3e6cb; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement externe */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Styles pour les messages d'erreur */
+.error-message {
+    background-color: #f8d7da; /* Couleur de fond */
+    color: #721c24; /* Couleur du texte */
+    border: 1px solid #f5c6cb; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement externe */
+    font-size: 16px; /* Taille de la police */
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+.form-tache {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style pour mettre en évidence les champs requis */
+.form-group label::after {
+    content: " *";
+    color: #e74c3c;
+}
+
+.form-group label[for="description"]::after,
+.form-group label[for="date_limite"]::after {
+    content: "";
+}
+
+@media (max-width: 768px) {
+    .form-tache {
+        padding: 15px;
+    }
+}
+
+.form-group input[readonly] {
+    background-color: #f4f4f4;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Ajustement du style du bouton de mise à jour */
+.btn-submit {
+    background-color: #3498db;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Style pour les champs datetime-local */
+.form-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Ajustement pour les étiquettes des champs non obligatoires */
+.form-group label[for="description"]::after,
+.form-group label[for="date_limite"]::after,
+.form-group label[for="date_creation"]::after,
+.form-group label[for="date_mise_a_jour"]::after {
+    content: "";
+}
+
+/* Styles pour le menu des onglets */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.tab-link.active,
+.tab-link:hover {
+    background-color: #ddd;
+}
+
+/* Styles pour les lignes de la table */
+.tache-row {
+    display: table-row;
+}
+
+.tache-row.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
